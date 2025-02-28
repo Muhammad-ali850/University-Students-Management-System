@@ -20,8 +20,6 @@ public class Student {
         System.out.print("1- 1st Year\n2- 2nd Year\n3- 3rd Year\n4- 4th Year\nEnter student Year ");
         this.year = s.nextInt();
         setStudentID();
-        enroll();
-        payment();
     }
 
     public void setStudentID(){
@@ -46,13 +44,15 @@ public class Student {
                 break;
             }
         }
+        System.out.println("Fees: " + tuitionBalance + "Rs");
     }
 
-    public void payment(){
-        System.out.println("Fees: " + tuitionBalance + "Rs");
+    public void payment(int pay){
+        if(pay == 1){
         System.out.print("Enter payment: ");
         int payment = s.nextInt();
-        tuitionBalance -= payment;
+        tuitionBalance -= payment;}
+        else{}
     }
 
     public void showInfo(){
